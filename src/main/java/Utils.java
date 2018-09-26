@@ -1,8 +1,12 @@
 package main.java;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.JspWriter;
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.Writer;
@@ -10,8 +14,17 @@ import java.sql.*;
 
 public class Utils {
     public static Connection getConnection(){
+        Context initContext = null;
         Connection connection=null;
         try {
+            initContext = new InitialContext();
+            DataSource ds = (DataSource) initContext.lookup("master_stock");
+            connection = ds.getConnection();
+        }catch (NamingException|SQLException e){
+            System.out.println("Exception in loadding db");
+            e.printStackTrace();
+        }
+        /*try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
         try {
@@ -24,7 +37,7 @@ public class Utils {
         }
         }catch (ClassNotFoundException e){
             System.out.println(e);
-        }
+        }*/
         return connection;
     }
     public static void displayTable(ResultSet set, JspWriter out){

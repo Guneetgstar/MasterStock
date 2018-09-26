@@ -1,4 +1,5 @@
-<%@ page import="java.sql.*" %><%--
+<%@ page import="java.sql.*" %>
+<%@ page import="main.java.Utils" %><%--
   Created by IntelliJ IDEA.
   User: Gunee
   Date: 23-09-2018
@@ -16,8 +17,7 @@
     String pw=request.getParameter("pw");
     if(id!=null&&pw!=null) {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        try(Connection connection = DriverManager.getConnection
-                ("jdbc:sqlserver://localhost:1433;databaseName=master_stock;user=sa;password=as");
+        try(Connection connection = Utils.getConnection();
             Statement statement = connection.createStatement();
             ResultSet set=statement.executeQuery("SELECT * FROM " +
                     "admin WHERE id ='"+id+"' AND pw ='"+pw+"'");) {
