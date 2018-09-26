@@ -23,11 +23,11 @@
                     "admin WHERE id ='"+id+"' AND pw ='"+pw+"'");) {
             System.out.println("success");
             if(set.next()){
-                response.sendRedirect("panel.jsp");
-                request.getSession().setAttribute("login","true");
+                response.sendRedirect("home.jsp");
+                request.getSession().setAttribute("cliLogin","true");
             }else{
                 response.sendRedirect("index.jsp");
-                request.getSession().setAttribute("login","false");
+                request.getSession().setAttribute("cliLogin","false");
             }
         } catch (Exception e) {
             System.out.println("Error" + e);

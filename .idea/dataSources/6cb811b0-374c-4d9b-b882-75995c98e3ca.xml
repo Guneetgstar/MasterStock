@@ -29,7 +29,7 @@
     </database>
     <schema id="7" parent="3" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2018-09-24.18:05:14.767</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-09-27.00:53:57.017</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -77,7 +77,7 @@
     <table id="21" parent="7" name="candidate">
       <ObjectId>741577680</ObjectId>
       <CreatedTimestamp>2018-09-23.04:39:02.230</CreatedTimestamp>
-      <ModifiedTimestamp>2018-09-23.04:41:33.090</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-09-27.00:42:04.417</ModifiedTimestamp>
     </table>
     <table id="22" parent="7" name="employer">
       <ObjectId>773577794</ObjectId>
@@ -87,7 +87,7 @@
     <table id="23" parent="7" name="interview">
       <ObjectId>901578250</ObjectId>
       <CreatedTimestamp>2018-09-23.05:32:59.130</CreatedTimestamp>
-      <ModifiedTimestamp>2018-09-23.05:32:59.167</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-09-27.00:53:56.730</ModifiedTimestamp>
     </table>
     <table id="24" parent="7" name="jobs">
       <ObjectId>885578193</ObjectId>
@@ -230,7 +230,8 @@
     </column>
     <column id="47" parent="21" name="dob">
       <Position>6</Position>
-      <DataType>varchar(50 char)|0s</DataType>
+      <DefaultConstraintName>candidate_dob_default</DefaultConstraintName>
+      <DataType>smalldatetime|0s</DataType>
     </column>
     <column id="48" parent="21" name="sex">
       <Position>7</Position>
@@ -397,7 +398,7 @@
     </column>
     <column id="83" parent="23" name="date">
       <Position>5</Position>
-      <DataType>varchar(50 char)|0s</DataType>
+      <DataType>smalldatetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="84" parent="23" name="time">

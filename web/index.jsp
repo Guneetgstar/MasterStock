@@ -10,16 +10,16 @@
 
 <script>
     <%
-    if(request.getSession().getAttribute("login")!=null){
-        if(request.getSession().getAttribute("login").equals("false")) {
+    if(request.getSession().getAttribute("cliLogin")!=null){
+        if(request.getSession().getAttribute("cliLogin").equals("false")) {
             out.print("alert(\"Please enter a valid details\")");
-            request.getSession().setAttribute("login","");
+            request.getSession().setAttribute("cliLogin","");
         }
         }
-    if(request.getSession().getAttribute("logout")!=null){
-        if(request.getSession().getAttribute("logout").equals("true")) {
+    if(request.getSession().getAttribute("cliLogout")!=null){
+        if(request.getSession().getAttribute("cliLogout").equals("true")) {
             out.print("alert(\"Logged out Successfully\")");
-            request.getSession().setAttribute("logout","");
+            request.getSession().setAttribute("cliLogout","");
         }
         }
 %>
@@ -38,16 +38,16 @@
     }
 </script>
 <div id="div1">
-    <a href="index.jsp">Admin</a>
-    <a href="../employ.jsp">Employer</a>
-    <a href="../index.jsp">Job Seeker</a>
-    <a href="../help.jsp">Help</a>
+    <a href="Admin/index.jsp">Admin</a>
+    <a href="employ.jsp">Employer</a>
+    <a href="index.jsp">Job Seeker</a>
+    <a href="help.jsp">Help</a>
 </div>
 <div id="div2">
-    <form action="login.jsp" method="post" id="login" onsubmit="return check()">
+    <form action="cliLogin.jsp" method="post" id="login" onsubmit="return check()">
         <table id="tb">
             <tr>
-                <td>Username</td>
+                <td>Candidate  Username</td>
                 <td><input type="text" id="id" width="100px" name="id"> </td>
             </tr>
             <tr>
