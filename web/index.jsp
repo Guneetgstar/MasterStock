@@ -38,10 +38,10 @@
     }
 </script>
 <div id="div1">
-    <a href="Admin/index.jsp">Admin</a>
-    <a href="employ.jsp">Employer</a>
-    <a href="index.jsp">Job Seeker</a>
-    <a href="help.jsp">Help</a>
+    <a class="nav" href="Admin/index.jsp">Admin</a>
+    <a class="nav" href="employ.jsp">Employer</a>
+    <a class="nav" href="index.jsp">Job Seeker</a>
+    <a class="nav" href="help.jsp">Help</a>
 </div>
 <div id="div2">
     <form action="cliLogin.jsp" method="post" id="login" onsubmit="return check()">
@@ -56,11 +56,15 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="submit" value="Login" align="center">
+                    <input class="button" style="margin-top: 20px" type="submit" value="Login" align="center">
                 </td>
             </tr>
         </table>
     </form>
+    <label>Or</label><center>
+    <a class="up" href="sign_up.jsp">
+    <input type="button" value="Sign Up" class="button"/>
+    </a></center>
 </div>
 <div style="width: 90%;margin-left: auto;margin-right: auto; background-color: cornflowerblue" ;>
     <footer style="text-align: center">

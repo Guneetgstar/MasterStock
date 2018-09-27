@@ -12,7 +12,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     final String VCAND = "select * from candidate;";
-
     final String VEMP = "select * from employer;";
     final String VJOB = "select * from jobs;";
     final String VINT = "select * from interview;";

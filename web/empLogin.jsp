@@ -20,13 +20,13 @@
         try(Connection connection = Utils.getConnection();
             Statement statement = connection.createStatement();
             ResultSet set=statement.executeQuery("SELECT * FROM " +
-                    "candidate WHERE loginID ='"+id+"' AND password ='"+pw+"'");) {
+                    "employer WHERE loginID ='"+id+"' AND password ='"+pw+"'");) {
             if(set.next()){
-                response.sendRedirect("home.jsp");
-                request.getSession().setAttribute("cliLogin","true");
+                response.sendRedirect("empHome.jsp");
+                request.getSession().setAttribute("empLogin","true");
             }else{
-                response.sendRedirect("index.jsp");
-                request.getSession().setAttribute("cliLogin","false");
+                response.sendRedirect("employ.jsp");
+                request.getSession().setAttribute("empLogin","false");
             }
         } catch (Exception e) {
             System.out.println("Error" + e);

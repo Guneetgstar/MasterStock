@@ -121,7 +121,7 @@
     });
     $('#logout').click(function () {
         location.assign('Logout')
-    })
+    });
     $('.add').click(function(){
         $.post('query.jsp',{value:$(this).attr('name')},function(e){
             $('#div2').html(e);

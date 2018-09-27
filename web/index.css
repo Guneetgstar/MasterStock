@@ -12,7 +12,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-a{
+.nav{
     padding-top: 10px;
     padding-left: 2%;
     padding-right: 2%;
@@ -22,6 +22,11 @@ a{
     color: aliceblue;
     text-decoration: none;
 }
+.up{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
 #input{
     width: 100%;
     line-height: 1.8;
@@ -29,6 +34,34 @@ a{
 }
 input{
     width: 100%;
+    outline:none;
+    text-align: center;
+}
+td{
+    color: cornflowerblue;
+}
+label{
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 1em;
+    color: cornflowerblue;
+
+}
+.button{
+    display: block;
+    width:100px;
+    height: 30px;
+    outline:none;
+    border: 0px;
+    text-align: center;
+    background-color: aliceblue;
+    color: cornflowerblue;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
 #tb{
     margin-top: 30px;

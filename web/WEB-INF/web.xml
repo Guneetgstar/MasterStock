@@ -7,8 +7,50 @@
         <servlet-name>Logout</servlet-name>
         <servlet-class>main.java.Logout</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PostJob</servlet-name>
+        <servlet-class>main.java.PostJob</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CandLogout</servlet-name>
+        <servlet-class>main.java.CandLogout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EmpLogout</servlet-name>
+        <servlet-class>main.java.EmpLogout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EmpSignUp</servlet-name>
+        <servlet-class>main.java.EmpSignUp</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CanSignUp</servlet-name>
+        <servlet-class>main.java.CanSignUp</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CandLogout</servlet-name>
+        <url-pattern>/CandLogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostJob</servlet-name>
+        <url-pattern>/PostJob</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Logout</servlet-name>
         <url-pattern>/Admin/Logout</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmpLogout</servlet-name>
+        <url-pattern>/EmpLogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmpSignUp</servlet-name>
+        <url-pattern>/EmpSignUp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CanSignUp</servlet-name>
+        <url-pattern>/CandSignUp</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
