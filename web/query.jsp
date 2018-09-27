@@ -14,8 +14,10 @@
 <head>
     <title>Title</title>
     <%
-        final String VCAND = "select * from candidate;";
-        final String VEMP = "select * from employer;";
+        final String VCAND = "select uname,dob, sex,mstatus,address,city,state,country," +
+                "contact,pcity,exp,cIND,dLevel,edu_qual,tech_qual from candidate;";
+        final String VEMP = "select e_mail,comp_name,detail,reg_date,address,city,state," +
+                "country,count_per,count_no from employer;";
         final String VJOB = "select * from jobs;";//Apply->
         final String PJOB="insert into jobs";
     %>

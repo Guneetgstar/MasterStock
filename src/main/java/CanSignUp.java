@@ -12,7 +12,7 @@ import java.util.Map;
 @WebServlet(name = "SignUp")
 public class CanSignUp extends HttpServlet {
     final String ACAND = "INSERT INTO [master_stock].[dbo].[candidate] " +
-            "([candID], [loginID], [password],  " +
+            "([candID], [uname], [password],  " +
             "[dob], [sex], [mstatus], [address], [city], [state], [country], " +
             "[contact],[edu_qual]) " +
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?\n" +

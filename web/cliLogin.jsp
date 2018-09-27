@@ -20,7 +20,7 @@
         try(Connection connection = Utils.getConnection();
             Statement statement = connection.createStatement();
             ResultSet set=statement.executeQuery("SELECT * FROM " +
-                    "candidate WHERE loginID ='"+id+"' AND password ='"+pw+"'");) {
+                    "candidate WHERE uname ='"+id+"' AND password ='"+pw+"'");) {
             if(set.next()){
                 response.sendRedirect("home.jsp");
                 request.getSession().setAttribute("cliLogin","true");
