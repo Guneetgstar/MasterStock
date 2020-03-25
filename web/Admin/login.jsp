@@ -16,6 +16,7 @@
     String id=request.getParameter("id");
     String pw=request.getParameter("pw");
     if(id!=null&&pw!=null) {
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         try(Connection connection = Utils.getConnection();
             Statement statement = connection.createStatement();
             ResultSet set=statement.executeQuery("SELECT * FROM " +
